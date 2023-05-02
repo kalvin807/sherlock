@@ -1,0 +1,6 @@
+[submodule "gbf-raid-finder"]
+	path = gbf-raid-finder
+	url = https://github.com/kalvin807/gbf-raid-finder.git
+[submodule "subee"]
+	path = subee
+	url = https://github.com/wantedly/subee.git

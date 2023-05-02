@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "sherlock"
+version = "0.1.0"
+description = ""
+authors = ["Calvin Leung <kalvin807@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+openai = "^0.27.5"
+langchain = "^0.0.154"
+notebook = "^6.5.4"
+chromadb = "^0.3.21"
+tqdm = "^4.65.0"
+unstructured = { extras = ["local-inference"], version = "0.6.1" }
+pdfminer-six = "^20221105"
+tiktoken = "^0.3.3"
+faiss-cpu = "^1.7.4"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.263"
+black = "^23.3.0"
+mypy = "^1.2.0"
+
+[tool.ruff]
+select = [
+    "E", # pycodestyle
+    "F", # pyflakes
+    "I", # isort
+]
+
+
+[tool.mypy]
+ignore_missing_imports = "True"
+exclude = ["notebooks"]
+
+[tool.coverage.run]
+omit = ["tests/*"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
